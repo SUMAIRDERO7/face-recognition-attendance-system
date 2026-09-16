@@ -63,6 +63,13 @@ class TestOpenCvFaceEncoderInit:
         with pytest.raises(FaceEncoderError, match="Could not load OpenCV cascade"):
             OpenCvFaceEncoder()
 
+    def test_unavailable_cascade_api_raises_encoder_error(self, monkeypatch):
+        import cv2
+
+        monkeypatch.delattr(cv2, "CascadeClassifier")
+        with pytest.raises(FaceEncoderError, match="OpenCV face detection is unavailable"):
+            OpenCvFaceEncoder()
+
 
 class TestOpenCvEncode:
     def test_empty_image_raises(self):

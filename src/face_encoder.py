@@ -164,10 +164,16 @@ class OpenCvFaceEncoder:
         if crop_size <= 0:
             raise ValueError("crop_size must be positive")
 
-        import cv2
+        try:
+            import cv2
 
-        cascade_path = cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
-        cascade = cv2.CascadeClassifier(cascade_path)
+            cascade_path = cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
+            cascade = cv2.CascadeClassifier(cascade_path)
+        except (AttributeError, ImportError, OSError, RuntimeError) as exc:
+            raise FaceEncoderError(
+                "OpenCV face detection is unavailable. Reinstall "
+                "opencv-python-headless so its Haar cascade is included."
+            ) from exc
         if cascade.empty():
             raise FaceEncoderError(f"Could not load OpenCV cascade from {cascade_path}")
 
