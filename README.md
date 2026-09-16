@@ -832,3 +832,5 @@ If you find this project useful for learning or experimentation, consider giving
 **Face Recognition Attendance System** is a computer-vision attendance application that combines face recognition with reliable attendance-management rules. Its architecture separates the recognition backend from application logic, enforces one-record-per-person-per-day at the database level, explicitly rejects uncertain identities, derives absences from attendance records, and maintains a comprehensive automated test suite.
 
 The project demonstrates how a computer-vision model can be integrated into a maintainable, testable software system rather than treated as an isolated ML demo.
+#   f a c e - r e c o g n i t i o n - a t t e n d a n c e - s y s t e m  
+ 
