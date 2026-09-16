@@ -10,8 +10,6 @@
 ![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?logo=sqlite\&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-**Day 48 of 60 — 60-Day Python/AI Portfolio Challenge**
-
 ---
 
 ## 📌 Overview
@@ -497,8 +495,6 @@ python main.py people
 
 ```bash
 python main.py history --id 21AI001
-
-# face-recognition-attendance-system
 ```
 
 ---
@@ -832,5 +828,3 @@ If you find this project useful for learning or experimentation, consider giving
 **Face Recognition Attendance System** is a computer-vision attendance application that combines face recognition with reliable attendance-management rules. Its architecture separates the recognition backend from application logic, enforces one-record-per-person-per-day at the database level, explicitly rejects uncertain identities, derives absences from attendance records, and maintains a comprehensive automated test suite.
 
 The project demonstrates how a computer-vision model can be integrated into a maintainable, testable software system rather than treated as an isolated ML demo.
-#   f a c e - r e c o g n i t i o n - a t t e n d a n c e - s y s t e m  
- 
